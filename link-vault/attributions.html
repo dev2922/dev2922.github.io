@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="css/attributions.css">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en';
             fetch('assets/attributions.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.json();
-                })
+                .then(response => response.json())
                 .then(data => {
-                    document.getElementById("title").innerText = data.title;
+                    const attributions = data[lang];
+
+                    document.getElementById('title').innerText = attributions.title;
 
                     const attributionsContainer = document.getElementById('attributions');
-                    data.attributions.forEach(section => {
+                    attributions.attributions.forEach(section => {
                         const sectionTitle = document.createElement('h2');
                         sectionTitle.innerText = section.name;
                         attributionsContainer.appendChild(sectionTitle);
