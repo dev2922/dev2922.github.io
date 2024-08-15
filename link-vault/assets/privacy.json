@@ -20,7 +20,7 @@
                     },
                     {
                         "title": "Data Access",
-                        "content": "Link Vault does not access other sensitive data on your device, such as contacts, messages, or files. All information remains on your device."
+                        "text": "Link Vault does not access other sensitive data on your device, such as contacts, messages, or files. All information remains on your device."
                     }
                 ]
             },
@@ -59,7 +59,7 @@
                     },
                     {
                         "title": "Acceso a Datos",
-                        "content": "Link Vault no accede a otros datos sensibles en su dispositivo, como contactos, mensajes o archivos. Toda la información permanece en su dispositivo."
+                        "text": "Link Vault no accede a otros datos sensibles en su dispositivo, como contactos, mensajes o archivos. Toda la información permanece en su dispositivo."
                     }
                 ]
             },
